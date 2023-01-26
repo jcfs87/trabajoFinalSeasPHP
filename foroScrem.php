@@ -6,11 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<?php 
+include_once 'crud.php';?>
+
 <body>
-<div style="background-color: #FFA500; padding: 20px; text-align: center; font-family: sans-serif; font-size: 24px;">
+<div class= ".miClase">
   <h1>¡Bienvenido a nuestro Foro!</h1>
   <p>Esperamos que disfrutes tu estancia aquí.</p>
+  
 </div>
-    
+<div>   
+  <p>Escribe el tema</p>
+  <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+  <textarea id="descripcion" name="descripcion" rows="4" 
+  cols="50" placeholder="Escribe aquí tu descripción aquí.">
+</textarea>
+ <br>
+  <input type="number" name="id_usuarioTema" required>
+  <br>
+  <button type="textTema" name="textTema" value="textTema">Enviar</button>
+</form>
+  </div>
 </body>
 </html>
